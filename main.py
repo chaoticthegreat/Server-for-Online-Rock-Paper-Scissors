@@ -43,7 +43,7 @@ def server():
     if servers[myserver][0] == username:opponent = servers[myserver][1]
     else:opponent = servers[myserver][0]
   except:
-    x = requests.get("https://Server-for-Online-Rock-Paper-Scissors.proryan.repl.co/"+username+"/true", json = {"server":myserver})
+    x = requests.get("https://Server-for-Online-Rock-Paper-Scissors.chaoticchaosthegreat.repl.co/"+username+"/true", json = {"server":myserver})
     if x.json()["match"] == "nothing":
       return "kicked"
     return {"0":x.json(), "1":"true"}
@@ -53,7 +53,7 @@ def server():
     return "Done!"
   elif request.method == "GET":
     if len(list(runningserver[myserver][int(round)])) == 1:
-      x = requests.get("https://Server-for-Online-Rock-Paper-Scissors.proryan.repl.co/"+username+"/true", json = {"server":myserver})
+      x = requests.get("https://Server-for-Online-Rock-Paper-Scissors.chaoticchaosthegreat.repl.co/"+username+"/true", json = {"server":myserver})
       if x.json()["match"] == "nothing":
         return "kicked"
       return {"0":x.json(), "1":"true"}
